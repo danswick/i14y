@@ -52,6 +52,7 @@ class Documents
     json.analyzer do
       generic_analyzers(json)
       french_analyzer(json)
+      tagalog_analyzer(json)
       japanese_analyzer(json)
       korean_analyzer(json)
       chinese_analyzer(json)
@@ -131,6 +132,15 @@ class Documents
     json.fr_analyzer do
       json.type "custom"
       json.filter ["icu_normalizer", "elision", "fr_stem_filter", "icu_folding"]
+      json.tokenizer "icu_tokenizer"
+      json.char_filter ["html_strip", "quotes"]
+    end
+  end
+
+  def tagalog_analyzer(json)
+    json.tl_analyzer do
+      json.type "custom"
+      json.filter ["icu_folding"]
       json.tokenizer "icu_tokenizer"
       json.char_filter ["html_strip", "quotes"]
     end

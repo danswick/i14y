@@ -770,6 +770,12 @@ describe DocumentSearch do
         lang_name: 'Bengali',
         content: 'আপনার ক্ষেত্রে প্রযোজ্য নিয়মগুলি খুঁজে পেতে ড্রপডাউন মেনু থেকে আপনার রাজ্য বা অঞ্চল নির্বাচন করুন৷',
         query: 'অঞ্চল'
+      },
+      {
+        lang_code: 'tl',
+        lang_name: 'Tagalog',
+        content: 'Piliin ang inyong estado o teritoryo mula sa dropdown na menu para mahanap ang mga panuntunang nararapat sa inyo.',
+        query: 'teritoryo'
       }
     ]
     languages.each do |lang|
